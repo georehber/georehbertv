@@ -1,0 +1,78 @@
+/* georehber.com ile ayni renk degiskenleri (css/style.css) ve ayni koyu tema sinifi (body.dark). */
+:root {
+  --primary: oklch(0.35 0.15 260); --primary-foreground: oklch(0.98 0 0);
+  --accent: oklch(0.65 0.22 142);
+  --secondary: oklch(0.92 0.01 260);
+  --muted-foreground: oklch(0.5 0.01 0);
+  --background: oklch(0.99 0 0); --foreground: oklch(0.15 0.02 0);
+  --card: oklch(1 0 0); --border: oklch(0.92 0.004 286.32);
+  --radius: 12px;
+  --shadow-sm: 0 8px 24px rgba(20, 35, 70, 0.06);
+  --shadow-md: 0 18px 48px rgba(20, 35, 70, 0.1);
+}
+body.dark {
+  --primary: oklch(0.45 0.12 260);
+  --secondary: oklch(0.18 0.01 260);
+  --muted-foreground: oklch(0.7 0.005 0);
+  --background: oklch(0.08 0.01 0); --foreground: oklch(0.95 0.005 0);
+  --card: oklch(0.12 0.01 0); --border: oklch(1 0 0 / 10%);
+}
+/* Koyu temada kartlar ve ikincil dugmeler marka yesilinden yari saydam cerceve alir. */
+body.dark .card, body.dark .kart, body.dark input, body.dark .theme-toggle, body.dark .btn-secondary {
+  border-color: color-mix(in srgb, oklch(0.65 0.22 142) 45%, transparent);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--background); color: var(--foreground); line-height: 1.6; min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+h1, h2, h3 { font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 600; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 70%, white); outline-offset: 3px; }
+
+.navbar {
+  position: sticky; top: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between;
+  height: 4rem; padding: 0 1rem; background: rgba(251, 252, 248, 0.94); backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--border);
+}
+body.dark .navbar { background: rgba(15, 21, 17, 0.94); }
+.navbar-brand { display: flex; align-items: center; gap: 0.5rem; font-size: 1.3rem; font-weight: 900; color: var(--primary); text-decoration: none; }
+body.dark .navbar-brand { color: var(--foreground); }
+.navbar-brand img { height: 2.4rem; width: auto; }
+.navbar-brand span { color: var(--accent); }
+.theme-toggle {
+  padding: 0.5rem; border-radius: 0.5rem; border: 1.5px solid var(--border); background: none;
+  color: var(--foreground); cursor: pointer; display: flex;
+}
+.theme-toggle svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.theme-toggle .ay { display: none; }
+body.dark .theme-toggle .gunes { display: none; }
+body.dark .theme-toggle .ay { display: block; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.75rem 1.5rem;
+  border-radius: 8px; font-weight: 600; font-size: 1rem; text-decoration: none; cursor: pointer;
+  transition: all 0.3s ease; font-family: inherit;
+}
+.btn-primary { background: var(--primary); color: var(--primary-foreground); border: 2px solid var(--primary); }
+.btn-primary:hover { background: oklch(0.4 0.15 260); border-color: oklch(0.4 0.15 260); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,.18); }
+body.dark .btn-primary:hover { background: oklch(0.5 0.12 260); border-color: oklch(0.5 0.12 260); }
+.btn-secondary { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
+body.dark .btn-secondary { color: var(--foreground); }
+.btn-secondary:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+.card {
+  border: 1px solid var(--border); border-radius: var(--radius); background: var(--card);
+  padding: 1.2rem 1.35rem; box-shadow: var(--shadow-sm);
+}
+.label { color: var(--accent); font-size: 0.78rem; font-weight: 850; letter-spacing: 0.08em; text-transform: uppercase; }
+.muted { color: var(--muted-foreground); }
+code, pre { font-family: 'Fira Code', ui-monospace, monospace; }
+code { background: var(--secondary); padding: 2px 6px; border-radius: 6px; font-size: 0.85em; word-break: break-all; }
+pre { background: var(--secondary); padding: 12px; border-radius: 10px; overflow-x: auto; font-size: 13px; }
+input {
+  width: 100%; padding: 0.75rem; border-radius: 8px; border: 1.5px solid var(--border); background: var(--card);
+  color: var(--foreground); font: 16px 'Inter', system-ui, sans-serif; text-align: center;
+}
