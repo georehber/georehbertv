@@ -1,7 +1,7 @@
 {
-    "kod":  2,
-    "ad":  "1.1",
-    "apk":  "https://georehber.com/georehbertv/georehber-tv-2.apk",
-    "sha256":  "54984171c644c1c219bb134071e781898a31c697645421e07d486dea41cf8bb1",
-    "notlar":  "Uyku zamanlayıcı saniye saniye geri sayıyor ve uygulama yeniden başlasa da kaybolmuyor. PIN TV\u0027den ve telefondan değiştirilebiliyor. Otomatik güncelleme eklendi."
+    "kod":  3,
+    "ad":  "1.2",
+    "apk":  "https://georehber.com/georehbertv/georehber-tv-3.apk",
+    "sha256":  "a99b69f40928f37e9f08fc00ecd2f715a250cfaafa4b540be3491e350b7a5449",
+    "notlar":  "Yeni tasarım: açık ve koyu tema, telefonla eşlenir. TV\u0027deki QR kodla telefon kumandası tek okutmada bağlanır. Whale ana ekranını TV\u0027den açıp kapatma, Ana ekran yap ve güvenli Kaldır kartları. Başka marka Android TV\u0027lerde kaynak değiştirme için standart yol."
 }
