@@ -111,6 +111,29 @@ adb install georehber-tv.apk</pre>
       </div>
     </div>
   </section>
+
+  <section class="section ara">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Kaldırmak isterseniz</span>
+        <h2>GeoRehber TV'yi güvenle silin</h2>
+        <p>GeoRehber TV'de en alttaki Ayarlar satırından <b>Kaldır</b> kartına basın. Whale ana ekranı kapalıysa önce yeniden açılır ve varsayılan yapılır, ardından GeoRehber TV silinir. Kanallarınız ve diğer uygulamalarınız etkilenmez.</p>
+      </div>
+      <div class="path-grid">
+        <article class="path-card genis">
+          <span class="path-label">Önemli</span>
+          <h3>Ayarlar menüsünden doğrudan silmeyin</h3>
+          <p>Whale ana ekranını kapattıysanız GeoRehber TV'yi TV'nin Ayarlar → Uygulamalar menüsünden silmek, TV'yi ana ekransız bırakır. Kaldır kartı bu adımı sizin yerinize doğru sırayla yapar.</p>
+        </article>
+        <article class="path-card">
+          <span class="path-label">Bilgisayardan</span>
+          <h3>Elle geri dönüş</h3>
+<pre>adb shell pm enable com.whaletv.launcher
+adb uninstall com.georehber.tv</pre>
+        </article>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="footer">
