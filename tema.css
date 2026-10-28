@@ -11,16 +11,18 @@
   --shadow-md: 0 18px 48px rgba(20, 35, 70, 0.1);
 }
 body.dark {
-  --primary: oklch(0.45 0.12 260);
+  /* Koyu temada ana dugmeler marka yesili, cerceveler lacivert */
+  --primary: oklch(0.6 0.2 142);
   --secondary: oklch(0.18 0.01 260);
   --muted-foreground: oklch(0.7 0.005 0);
   --background: oklch(0.08 0.01 0); --foreground: oklch(0.95 0.005 0);
   --card: oklch(0.12 0.01 0); --border: oklch(1 0 0 / 10%);
 }
-/* Koyu temada kartlar ve ikincil dugmeler marka yesilinden yari saydam cerceve alir. */
+/* Koyu temada kartlar ve ikincil dugmeler lacivert cerceve alir. */
 body.dark .card, body.dark .kart, body.dark input, body.dark .theme-toggle, body.dark .btn-secondary {
-  border-color: color-mix(in srgb, oklch(0.65 0.22 142) 45%, transparent);
+  border-color: oklch(0.5 0.13 260);
 }
+body.dark .btn-primary:hover { background: oklch(0.66 0.2 142); border-color: oklch(0.66 0.2 142); }
 * { box-sizing: border-box; }
 html, body { margin: 0; }
 body {
