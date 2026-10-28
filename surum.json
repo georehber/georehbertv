@@ -1,7 +1,7 @@
 {
-    "kod":  4,
-    "ad":  "1.3",
-    "apk":  "https://georehber.com/georehbertv/georehber-tv-4.apk",
-    "sha256":  "02c1cd3d8a5b1eac3cb983a660264c621fb7334ea69f54721ddec6ceae9c0aa3",
-    "notlar":  "Seçili kartın altında görünen köşeli gri gölge kaldırıldı."
+    "kod":  5,
+    "ad":  "1.4",
+    "apk":  "https://georehber.com/georehbertv/georehber-tv-5.apk",
+    "sha256":  "b80311d60c07727e2edc384ca88f8a102dc27d03f167667f4f5f77d31890bd56",
+    "notlar":  "Seçili kartın altındaki gri gölge kaldırıldı. QR ile bağlanırken eski telefon önbelleği yüzünden PIN sorulması düzeltildi."
 }
