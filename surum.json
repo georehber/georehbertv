@@ -1,7 +1,7 @@
 {
-    "kod":  7,
-    "ad":  "1.6",
-    "apk":  "https://georehber.com/georehbertv/georehber-tv-7.apk",
-    "sha256":  "dc44536f910744303fae23a9e5e436014b776358daa6fa7fa49e423b055bd956",
-    "notlar":  "Güncellemeler artık onay sormadan, sessizce kuruluyor. QR ile bağlanırken PIN sorulması düzeltildi. Seçili kartın altındaki gri gölge kaldırıldı."
+    "kod":  8,
+    "ad":  "1.7",
+    "apk":  "https://georehber.com/georehbertv/georehber-tv-8.apk",
+    "sha256":  "b542cd12edd5040bed714b824106be0f34a4a092cd6543b32a06a56a8a471777",
+    "notlar":  "Güncelleme bitince ana ekran kendiliğinden yeniden açılıyor."
 }
