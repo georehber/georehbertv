@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#16294F">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+<link rel="icon" href="logo.png">
+<title>GeoRehber TV Kurulum</title>
+<style>
+  :root { --n:#16294F; --n2:#1E3868; --g:#2E7D32; --l:#7BC47F; --s:#AEBACF; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 48px; color: #fff; line-height: 1.6;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: radial-gradient(120% 60% at 50% 0%, #264a85 0%, var(--n) 55%, #0e1d3a 100%);
+    background-color: var(--n);
+  }
+  main { max-width: 680px; margin: 0 auto; }
+  header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  header img { width: 52px; height: 52px; }
+  h1 { font-size: 24px; margin: 0; }
+  h2 { font-size: 18px; margin: 28px 0 8px; color: var(--l); }
+  p, li { color: #dfe6f3; font-size: 15px; }
+  .not { color: var(--s); font-size: 14px; }
+  .kart { background: var(--n2); border-radius: 16px; padding: 4px 18px 10px; margin: 12px 0; border: 1px solid rgba(255,255,255,.08); }
+  a.btn { display: inline-block; padding: 14px 22px; border-radius: 14px; background: var(--g); color: #fff; font-weight: 600; text-decoration: none; margin: 8px 0; }
+  code { background: #0e1d3a; padding: 2px 6px; border-radius: 6px; font-size: 13px; color: #cfe8d0; word-break: break-all; }
+  pre { background: #0e1d3a; padding: 12px; border-radius: 12px; overflow-x: auto; font-size: 13px; color: #cfe8d0; }
+</style>
+</head>
+<body>
+<main>
+  <header><img src="logo.png" alt=""><h1>GeoRehber TV kurulumu</h1></header>
+  <p>Reklamsız ana ekran ve telefondan kumanda. Whale OS kullanan Android TV'ler için hazırlandı (Onvo SMART2KTVe üzerinde denendi).</p>
+  <a class="btn" href="georehber-tv.apk" download>APK dosyasını indir</a>
+
+  <h2>1. Kurulum (USB bellekle)</h2>
+  <div class="kart"><ol>
+    <li>Yukarıdaki düğmeyle <code>georehber-tv.apk</code> dosyasını bilgisayara indirip USB belleğe kopyalayın.</li>
+    <li>USB belleği TV'ye takın. TV'deki <b>Dosyalar</b> (File Browser) uygulamasıyla belleği açıp APK dosyasını seçin.</li>
+    <li>"Bilinmeyen kaynaklardan yüklemeye izin verilsin mi?" sorulursa izin verip <b>Yükle</b>'ye basın.</li>
+    <li>TV'nin uygulamalar listesinden <b>GeoRehber TV</b>'yi açın.</li>
+  </ol></div>
+
+  <h2>2. İzin (bir kez)</h2>
+  <div class="kart"><ol>
+    <li>TV'de <b>Ayarlar → Cihaz Tercihi → Hakkında</b>'ya girip <b>Yapı</b> (Build) satırına 7 kez basın. Geliştirici seçenekleri açılır.</li>
+    <li><b>Geliştirici Seçenekleri</b>'nde <b>USB hata ayıklama</b>'yı açın.</li>
+    <li>GeoRehber TV'ye dönüp en alttaki <b>Ayarlar</b> satırından <b>Ana ekran yap</b> kartına basın. Çıkan soruda <b>Her zaman izin ver</b>'i işaretleyip onaylayın.</li>
+  </ol>
+  <p class="not">Bu izinle GeoRehber TV varsayılan ana ekran olur, telefondan yön tuşları çalışır ve güncellemeler sessizce kurulur. Bilgisayar gerekmez.</p></div>
+
+  <h2>3. Whale ana ekranını kapatmak (isteğe bağlı)</h2>
+  <div class="kart"><p>Ayarlar satırındaki <b>Whale ana ekranı</b> kartına basın. Kapatınca RAM boşalır ve kumandadaki Kaynak tuşu GeoRehber'in kaynak penceresini açar. Aynı karttan istediğiniz zaman geri açabilirsiniz.</p></div>
+
+  <h2>4. Telefon kumandası</h2>
+  <div class="kart"><ol>
+    <li>Telefon TV ile aynı Wi-Fi'deyken tarayıcıda TV ekranının sağ üstünde yazan adresi açın (örneğin <code>http://192.168.1.xx:8080</code>).</li>
+    <li>İlk PIN <b>0000</b>. Kumanda sayfasındaki <b>Daha fazla → PIN'i değiştir</b> ya da TV'deki <b>Telefon Kumandası → PIN'i değiştir</b> ile değiştirin.</li>
+    <li>Tarayıcı menüsünden <b>Ana ekrana ekle</b>'yi seçerseniz kumanda telefonda simge olarak durur.</li>
+  </ol></div>
+
+  <h2>5. Güncellemeler</h2>
+  <div class="kart"><p>TV internete bağlıyken yeni sürüm çıkarsa ana ekranda Ayarlar satırının başında yeşil <b>Güncelleme var</b> kartı görünür. Karta basmanız yeterli.</p></div>
+
+  <h2>Bilgisayardan kurulum (ileri düzey)</h2>
+  <div class="kart">
+    <p>Android SDK platform-tools (adb) kurulu bir bilgisayarda, TV'de kablosuz hata ayıklama açıkken:</p>
+<pre>adb pair TV_IP:EŞLEŞTİRME_PORTU   (TV'deki 6 haneli kodu girin)
+adb connect TV_IP:BAĞLANTI_PORTU
+adb install georehber-tv.apk
+adb shell cmd package set-home-activity com.georehber.tv/.MainActivity
+adb shell appops set com.georehber.tv SYSTEM_ALERT_WINDOW allow</pre>
+  </div>
+</main>
+</body>
+</html>
